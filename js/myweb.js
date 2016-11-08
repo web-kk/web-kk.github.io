@@ -87,3 +87,13 @@ $(document).ready(function(){
 
 
 })
+
+$(document).ready(function(){
+	$(window).scroll(function(){
+		var sctop=$(window).scrollTop()
+		var top=$('.about-f').position().top
+		if(sctop>=top-400){
+			$('.about-title h2').add('.about-title h1').add('.about-title h3').addClass('activetop')
+		}
+	})
+})
