@@ -70,6 +70,13 @@ $(document).ready(function(){
 				animate(document.documentElement,{scrollTop:$('.floor').eq(index).offset().top})
 			})
 		})
+		$('.h-right-3 li').each(function(){	
+			$('.h-right-3 li').click(function(){
+				var index=$(this).index()
+				animate(document.body,{scrollTop:$('.floor').eq(index).offset().top})
+				animate(document.documentElement,{scrollTop:$('.floor').eq(index).offset().top})
+			})
+		})
 		//back
 		if($(window).scrollTop()>=$('.about-f').offset().top-200){
 			$('.back').show()
