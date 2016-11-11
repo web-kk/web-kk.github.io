@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	var j=setInterval(function(){$('.home-f').css("height",$(window).height())},300)
+//	var j=setInterval(function(){$('.home-f').css("height",$(window).height())},300)
 	//lunbo	
 	var n=0;
 	var t=setInterval(move,6000)
@@ -98,9 +98,31 @@ $(document).ready(function(){
 $(document).ready(function(){
 	$(window).scroll(function(){
 		var sctop=$(window).scrollTop()
-		var top=$('.about-f').position().top
-		if(sctop>=top-400){
-			$('.about-title h2').add('.about-title h1').add('.about-title h3').addClass('activetop')
+		function screen(a,b){
+			var top=a.position().top
+			if(sctop>=top-500){
+				b.addClass('activetop')
+			}
 		}
+		screen($('.about-f'),$('.title-1'))
+		screen($('.works-f'),$('.title-2'))
+		screen($('.can-f'),$('.title-3'))
+		function scopt(a,b){
+			var top=a.position().top
+			if(sctop>=top+220){
+				b.addClass('activeleft')
+			}
+		}
+
+
+		scopt($('.about-img'),$('.about-img'))
+		function scopr(a,b){
+			var top=a.position().top
+			if(sctop>=top+220){
+				b.addClass('activeright')
+			}
+		}
+		scopr($('.about-in'),$('.about-in'))
+		
 	})
 })
