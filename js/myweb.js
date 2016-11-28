@@ -49,9 +49,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 
-	//导航出现消失
 	$(window).scroll(function(){	
-		//出现对应的效果
 		$('.floor').each(function(z){
 			if($(window).scrollTop()>=$('.floor').eq(z).offset().top-100){
 				$('.h-right li').each(function(x){
@@ -62,14 +60,7 @@ $(document).ready(function(){
 
 			}
 		})
-		//点击回到对应的楼层
-		$('.h-right li').each(function(){	
-			$('.h-right li').click(function(){
-				var index=$(this).index()
-				animate(document.body,{scrollTop:$('.floor').eq(index).offset().top})
-				animate(document.documentElement,{scrollTop:$('.floor').eq(index).offset().top})
-			})
-		})
+		
 		$('.h-right-3 li').each(function(){	
 			$('.h-right-3 li').click(function(){
 				var index=$(this).index()
@@ -91,7 +82,14 @@ $(document).ready(function(){
 		
 	})	
 		
-
+	//点击回到对应的楼层
+		$('.h-right li').each(function(){	
+			$('.h-right li').click(function(){
+				var index=$(this).index()
+				animate(document.body,{scrollTop:$('.floor').eq(index).offset().top})
+				animate(document.documentElement,{scrollTop:$('.floor').eq(index).offset().top})
+			})
+		})
 
 })
 
