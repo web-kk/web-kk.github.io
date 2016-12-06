@@ -123,4 +123,19 @@ $(document).ready(function(){
 		scopr($('.about-in'),$('.about-in'))
 		
 	})
+	$('.k-list').on('click','li',function(){
+		var index=$(this).index()
+		$('.k-list li').removeClass('k-active')
+		$(this).addClass('k-active')
+		if(index===0){
+			$(this).addClass('k-active')
+			$('.box').show()
+		}else if(index===1){
+			$('.box').hide()
+			$('.k-pc').show()
+		}else{
+			$('.box').hide()
+			$('.k-phone').show()
+		}
+	})
 })

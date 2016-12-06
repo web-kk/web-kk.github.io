@@ -349,7 +349,7 @@ a{
 	overflow: hidden;
 	float: left;
 	margin: 10px 40px;
-	margin-top: 100px;
+	margin-top: 60px;
 	display: inline-block;
 	padding: 0!important;
 	box-shadow: 0 0 10px #000000;
@@ -494,6 +494,20 @@ a{
 .can-lunbo li:nth-child(12){
 	background: url(../img/ph.jpg) no-repeat center;
 	background-size:cover ;
+}
+.k-list li{
+	float: left;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	margin-top: 60px;
+	font-size: 12px;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.k-active{
+	background: rgba(0,0,0,0.6);
+	color: #FFFFFF;
 }
 /*cantact*/
 .cantact-f{
